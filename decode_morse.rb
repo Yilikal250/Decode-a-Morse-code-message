@@ -51,3 +51,13 @@ end
 puts decode_char('.-').upcase
 puts decode_word('-- -.--').upcase
 puts decode('.-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...').upcase
+
+# Method to decode the entire message in Morse code.
+def decode(message)
+  @full_message = message.split('   ')
+  @final_message = ''
+  @full_message.each do |morse_code_message|
+    @final_message += "#{decode_word(morse_code_message)}" + " "
+  end
+  @final_message
+end
