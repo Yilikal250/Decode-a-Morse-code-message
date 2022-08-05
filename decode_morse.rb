@@ -26,7 +26,7 @@ MORSE_DICT = {
   '-..-' => 'x',
   '-.--' => 'y',
   '--..' => 'z'
-}
+}.freeze
 
 # Method to decode a Morse code character.
 def decode_char(char)
