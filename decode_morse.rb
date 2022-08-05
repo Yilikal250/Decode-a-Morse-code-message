@@ -1,5 +1,5 @@
 # Set to dictionary file to load
-MORSE_DICT = Hash[
+MORSE_DICT = hash[
   'A' => '.-',
   'B' => '-...',
   'C' => '-.-.',
@@ -29,7 +29,7 @@ MORSE_DICT = Hash[
   ' ' => ' ',
 ]
 
-# Method to decode a Morse code character. 
+# Method to decode a Morse code character.
 def decode_char(char)
   @char = ''
   MORSE_DICT.each do |key, value|
@@ -57,7 +57,7 @@ def decode(message)
   @full_message = message.split('   ')
   @final_message = ''
   @full_message.each do |morse_code_message|
-    @final_message += "#{decode_word(morse_code_message)}" + " "
+    @final_message += "#{decode_word(morse_code_message)} "
   end
   @final_message
 end
