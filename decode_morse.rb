@@ -1,33 +1,32 @@
 # Set to dictionary file to load
-MORSE_DICT = hash[
-  'A' => '.-',
-  'B' => '-...',
-  'C' => '-.-.',
-  'D' => '-..',
-  'E' => '.',
-  'F' => '..-.',
-  'G' => '--.',
-  'H' => '....',
-  'I' => '..',
-  'J' => '.---',
-  'K' => '-.-',
-  'L' => '.-..',
-  'M' => '--',
-  'N' => '-.',
-  'O' => '---',
-  'P' => '.--.',
-  'Q' => '--.-',
-  'R' => '.-.',
-  'S' => '...',
-  'T' => '-',
-  'U' => '..-',
-  'V' => '...-',
-  'W' => '.--',
-  'X' => '-..-',
-  'Y' => '-.--',
-  'Z' => '--..',
-  ' ' => ' ',
-]
+MORSE_DICT = {
+  '.-' => 'a',
+  '-...' => 'b',
+  '-.-.' => 'c',
+  '-..' => 'd',
+  '.' => 'e',
+  '..-.' => 'f',
+  '--.' => 'g',
+  '....' => 'h',
+  '..' => 'i',
+  '.---' => 'j',
+  '-.-' => 'k',
+  '.-..' => 'l',
+  '--' => 'm',
+  '-.' => 'n',
+  '---' => 'o',
+  '.--.' => 'p',
+  '--.-' => 'q',
+  '.-.' => 'r',
+  '...' => 's',
+  '-' => 't',
+  '..-' => 'u',
+  '...-' => 'v',
+  '.--' => 'w',
+  '-..-' => 'x',
+  '-.--' => 'y',
+  '--..' => 'z'
+}
 
 # Method to decode a Morse code character.
 def decode_char(char)
@@ -48,10 +47,6 @@ def decode_word(word)
   @word
 end
 
-puts decode_char('.-').upcase
-puts decode_word('-- -.--').upcase
-puts decode('.-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...').upcase
-
 # Method to decode the entire message in Morse code.
 def decode(message)
   @full_message = message.split('   ')
@@ -61,3 +56,7 @@ def decode(message)
   end
   @final_message
 end
+
+puts decode_char('.-').upcase
+puts decode_word('-- -.--').upcase
+puts decode('.-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...').upcase
